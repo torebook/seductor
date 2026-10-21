@@ -18,16 +18,8 @@
                             600: '#aa8c2c',
                             700: '#856c1e'
                         },
-                        crimson: {
-                            500: '#ef4444',
-                            600: '#dc2626',
-                            700: '#b91c1c',
-                            800: '#991b1b',
-                            900: '#7f1d1d'
-                        },
                         darkbg: '#08080a',
                         darkcard: '#121216',
-                        darkcardhover: '#1a1a20',
                         darkborder: '#262630'
                     },
                     fontFamily: {
@@ -44,21 +36,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Script Oficial de Hotmart (Opcional/Respaldo) -->
-    <script type="text/javascript">
-        function importHotmart(){ 
-            var imported = document.createElement('script'); 
-            imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
-            document.head.appendChild(imported); 
-            var link = document.createElement('link'); 
-            link.rel = 'stylesheet'; 
-            link.type = 'text/css'; 
-            link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
-            document.head.appendChild(link);
-        } 
-        importHotmart(); 
-    </script>
-
     <style>
         body {
             background-color: #08080a;
@@ -73,32 +50,30 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gold-button-gradient {
-            background: linear-gradient(135deg, #f1c40f 0%, #d4af37 50%, #aa8c2c 100%);
+        /* Estilos directos garantizados para los botones */
+        .btn-comprar {
+            background-color: #dc2626 !important;
+            color: #ffffff !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-weight: 800 !important;
+            text-transform: uppercase !important;
+            border: 2px solid #f1c40f !important;
+            box-shadow: 0 0 15px rgba(220, 38, 38, 0.6) !important;
+            transition: all 0.3s ease !important;
         }
-        .gold-button-gradient:hover {
-            background: linear-gradient(135deg, #fff2a3 0%, #f1c40f 50%, #d4af37 100%);
-        }
-        .red-button-gradient {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%);
-        }
-        .red-button-gradient:hover {
-            background: linear-gradient(135deg, #f87171 0%, #ef4444 50%, #b91c1c 100%);
-        }
-        .gold-border-glow {
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-            border: 1px solid rgba(212, 175, 55, 0.4);
-        }
-        .red-glow {
-            box-shadow: 0 0 25px rgba(220, 38, 38, 0.4);
+        .btn-comprar:hover {
+            background-color: #b91c1c !important;
+            transform: scale(1.05) !important;
         }
     </style>
 </head>
-<body class="antialiased selection:bg-crimson-600 selection:text-white">
+<body class="antialiased selection:bg-red-600 selection:text-white">
 
     <!-- Top Urgency Banner -->
-    <div class="bg-gradient-to-r from-crimson-900 via-crimson-700 to-crimson-900 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-bold tracking-wide uppercase shadow-lg flex items-center justify-center gap-2">
-        <span class="animate-pulse flex h-2 w-2 rounded-full bg-yellow-400"></span>
+    <div class="bg-red-900 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-bold tracking-wide uppercase shadow-lg flex items-center justify-center gap-2 border-b border-red-700">
+        <span class="animate-pulse flex h-2.5 w-2.5 rounded-full bg-yellow-400"></span>
         <span>OFERTA LIMITADA: 50% DE DESCUENTO DISPONIBLE SOLO POR HOY</span>
     </div>
 
@@ -111,18 +86,17 @@
                 </div>
                 <span class="font-serif-title font-black text-base sm:text-lg tracking-wider gold-gradient-text">MÁSTER DE LA SEDUCCIÓN</span>
             </div>
-            <!-- Direct Purchase Link in Header -->
-            <a href="https://pay.hotmart.com/U108058057U" target="_blank" rel="noopener noreferrer" class="red-button-gradient text-white text-xs sm:text-sm font-bold py-2 px-4 rounded-full transition-all duration-300 shadow-md hover:scale-105 flex items-center gap-2">
+            
+            <!-- Botón 1: Header -->
+            <a href="https://pay.hotmart.com/U108058057U" target="_blank" rel="noopener noreferrer" class="btn-comprar text-xs sm:text-sm py-2 px-5 rounded-full">
                 <span>Comprar Ebook</span>
-                <i class="fa-solid fa-arrow-right text-xs"></i>
+                <i class="fa-solid fa-arrow-right text-xs ml-2"></i>
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative py-12 md:py-24 px-4 overflow-hidden border-b border-darkborder">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-crimson-900/25 via-darkbg to-darkbg -z-10"></div>
-        
         <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-10 items-center">
             <!-- Text Content -->
             <div class="md:col-span-7 text-center md:text-left space-y-6">
@@ -154,10 +128,10 @@
                     </div>
                 </div>
 
-                <!-- Call to Action Buttons -->
+                <!-- Botón 2: Hero Section -->
                 <div class="pt-4 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
-                    <a href="https://pay.hotmart.com/U108058057U" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto red-button-gradient text-white font-extrabold text-base sm:text-lg px-8 py-4 rounded-xl shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 red-glow">
-                        <i class="fa-solid fa-bolt text-yellow-300"></i>
+                    <a href="https://pay.hotmart.com/U108058057U" target="_blank" rel="noopener noreferrer" class="btn-comprar w-full sm:w-auto text-base sm:text-lg px-8 py-4 rounded-xl">
+                        <i class="fa-solid fa-bolt text-yellow-300 mr-2"></i>
                         <span>¡OBTENER ACCESO INMEDIATO!</span>
                     </a>
                 </div>
@@ -168,24 +142,21 @@
                 </div>
             </div>
 
-            <!-- Book Cover Preview / Classic Aesthetic -->
+            <!-- Book Cover Preview -->
             <div class="md:col-span-5 flex justify-center">
                 <div class="relative group w-full max-w-[300px]">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-gold-500 to-crimson-600 rounded-2xl blur opacity-40 group-hover:opacity-80 transition duration-500"></div>
-                    
-                    <div class="relative bg-darkcard p-5 rounded-2xl border border-darkborder shadow-2xl">
+                    <div class="bg-darkcard p-5 rounded-2xl border border-darkborder shadow-2xl">
                         <div class="border-2 border-gold-500/40 rounded-xl p-6 bg-gradient-to-b from-gray-900 via-black to-gray-950 text-center flex flex-col items-center justify-between min-h-[420px]">
                             <div class="w-full">
                                 <div class="flex justify-center mb-3">
                                     <i class="fa-solid fa-chess-king text-4xl text-gold-500"></i>
                                 </div>
                                 <h3 class="font-serif-title text-2xl font-black tracking-wider text-white">MÁSTER</h3>
-                                <p class="text-crimson-600 font-bold italic tracking-wider text-base">de la seducción</p>
+                                <p class="text-red-500 font-bold italic tracking-wider text-base">de la seducción</p>
                                 <div class="w-12 h-0.5 bg-gold-500/50 mx-auto my-3"></div>
                                 <p class="text-[10px] text-gray-400 uppercase tracking-widest">Las Mejores Técnicas Persuasivas</p>
                             </div>
                             
-                            <!-- Statue / Luxury Icon Representation -->
                             <div class="my-6 relative">
                                 <div class="w-24 h-24 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center mx-auto">
                                     <i class="fa-solid fa-masks-theater text-5xl text-gold-400"></i>
@@ -211,7 +182,7 @@
                 <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Principios de Cialdini</p>
             </div>
             <div class="p-2">
-                <p class="text-2xl sm:text-4xl font-black text-crimson-500 font-serif-title">23</p>
+                <p class="text-2xl sm:text-4xl font-black text-red-500 font-serif-title">23</p>
                 <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Tips de Atracción Práctica</p>
             </div>
             <div class="p-2">
@@ -219,159 +190,18 @@
                 <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Efectivo en WhatsApp</p>
             </div>
             <div class="p-2">
-                <p class="text-2xl sm:text-4xl font-black text-crimson-500 font-serif-title">PDF</p>
+                <p class="text-2xl sm:text-4xl font-black text-red-500 font-serif-title">PDF</p>
                 <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Acceso Digital Inmediato</p>
             </div>
         </div>
     </section>
 
-    <!-- Target Audience Section -->
-    <section class="py-16 px-4 max-w-5xl mx-auto border-b border-darkborder">
-        <div class="text-center space-y-3 mb-12">
-            <h2 class="text-xs font-bold uppercase tracking-widest text-gold-500">¿Para quién es este libro?</h2>
-            <p class="text-3xl sm:text-4xl font-black font-serif-title text-white">Diseñado para quienes buscan destacar</p>
-            <p class="text-gray-400 text-sm max-w-xl mx-auto">Tanto si deseas mejorar tus relaciones personales como si quieres dominar la persuasión comercial y social.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-darkcard p-6 rounded-2xl border border-darkborder hover:border-gold-500/40 transition duration-300 flex gap-4 items-start">
-                <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-user-tie text-xl text-gold-400"></i>
-                </div>
-                <div class="space-y-2">
-                    <h3 class="font-bold text-lg text-white">Hombres y Mujeres en Negocios y Ventas</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Aprende a vender ideas, superar objeciones sin confrontar, proyectar autoridad inquebrantable y cerrar acuerdos con elegancia y carisma.</p>
-                </div>
-            </div>
-
-            <div class="bg-darkcard p-6 rounded-2xl border border-darkborder hover:border-crimson-600/40 transition duration-300 flex gap-4 items-start">
-                <div class="w-12 h-12 rounded-xl bg-crimson-600/10 border border-crimson-600/30 flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-heart text-xl text-crimson-500"></i>
-                </div>
-                <div class="space-y-2">
-                    <h3 class="font-bold text-lg text-white">Personas que buscan Seducción y Conexión</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Descubre cómo generar misterio, activar el deseo natural, manejar el lenguaje corporal y dominar la conversación estratégica en citas y redes sociales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Course Modules Section -->
-    <section class="py-16 px-4 max-w-5xl mx-auto">
-        <div class="text-center space-y-3 mb-12">
-            <h2 class="text-xs font-bold uppercase tracking-widest text-gold-500">Contenido Exclusivo</h2>
-            <p class="text-3xl sm:text-4xl font-black font-serif-title text-white">Lo que Aprenderás dentro del Ebook</p>
-            <p class="text-gray-400 text-sm max-w-xl mx-auto">Estructura paso a paso para transformar tu mentalidad, comunicación e impacto social.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6">
-            <!-- Módulo 1 -->
-            <div class="bg-darkcard border border-darkborder rounded-2xl p-6 hover:border-gold-500/50 transition duration-300 space-y-4">
-                <div class="flex items-center gap-3 border-b border-darkborder pb-4">
-                    <span class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 font-bold flex items-center justify-center font-serif-title text-lg border border-gold-500/30">01</span>
-                    <h3 class="font-bold text-lg text-white">Persuasión en Vida y Negocios</h3>
-                </div>
-                <ul class="text-sm text-gray-300 space-y-2.5">
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span><strong>Influencia vs Autoridad:</strong> Diferencias clave entre <i>Potestas</i> y <i>Auctoritas</i>.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span><strong>Superar Excusas:</strong> Cómo neutralizar objeciones sin confrontación.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span><strong>El Efecto Simpatía:</strong> Adaptación camaleónica al interlocutor.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span>Manejo de números y estructuras de framing estratégico.</span></li>
-                </ul>
-            </div>
-
-            <!-- Módulo 2 -->
-            <div class="bg-darkcard border border-darkborder rounded-2xl p-6 hover:border-crimson-600/50 transition duration-300 space-y-4">
-                <div class="flex items-center gap-3 border-b border-darkborder pb-4">
-                    <span class="w-10 h-10 rounded-lg bg-crimson-600/10 text-crimson-500 font-bold flex items-center justify-center font-serif-title text-lg border border-crimson-600/30">02</span>
-                    <h3 class="font-bold text-lg text-white">5 Estrategias de Persuasión Científica</h3>
-                </div>
-                <ul class="text-sm text-gray-300 space-y-2.5">
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span><strong>Regla de Oro:</strong> Por qué nunca debes decirle directamente a alguien que se equivoca.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span><strong>Sincronización:</strong> Calibración de estados emocionales y corporalidad.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span><strong>Dar opciones:</strong> Cómo dar alternativas manteniendo el control de la situación.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span><strong>Aprobación Social:</strong> Aprovechar la presión del entorno a tu favor.</span></li>
-                </ul>
-            </div>
-
-            <!-- Módulo 3 -->
-            <div class="bg-darkcard border border-darkborder rounded-2xl p-6 hover:border-gold-500/50 transition duration-300 space-y-4">
-                <div class="flex items-center gap-3 border-b border-darkborder pb-4">
-                    <span class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 font-bold flex items-center justify-center font-serif-title text-lg border border-gold-500/30">03</span>
-                    <h3 class="font-bold text-lg text-white">Los 7 Principios de Cialdini</h3>
-                </div>
-                <ul class="text-sm text-gray-300 space-y-2.5">
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span><strong>Reciprocidad & Deuda Moral:</strong> El poder del intercambio psicológico.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span><strong>Compromiso y Coherencia:</strong> Pequeños "Sí" que conducen al acuerdo final.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span><strong>Escasez y Reactancia:</strong> El impulso irracional por lo que se puede perder.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span><strong>El Principio de Unidad:</strong> Creación de sentido de pertenencia y tribu.</span></li>
-                </ul>
-            </div>
-
-            <!-- Módulo 4 -->
-            <div class="bg-darkcard border border-darkborder rounded-2xl p-6 hover:border-crimson-600/50 transition duration-300 space-y-4">
-                <div class="flex items-center gap-3 border-b border-darkborder pb-4">
-                    <span class="w-10 h-10 rounded-lg bg-crimson-600/10 text-crimson-500 font-bold flex items-center justify-center font-serif-title text-lg border border-crimson-600/30">04</span>
-                    <h3 class="font-bold text-lg text-white">23 Tips para Enamorar y Seducir</h3>
-                </div>
-                <ul class="text-sm text-gray-300 space-y-2.5">
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span>Lenguaje corporal avanzado, tono de voz y contacto visual prolongado.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span>Generación de misterio y el valor de no estar siempre disponible.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span>Frases de seducción subliminal y cumplidos al ego sutiles.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span>Uso de la escasez y proyección de un alto valor percibido.</span></li>
-                </ul>
-            </div>
-
-            <!-- Módulo 5 -->
-            <div class="bg-darkcard border border-darkborder rounded-2xl p-6 hover:border-gold-500/50 transition duration-300 space-y-4">
-                <div class="flex items-center gap-3 border-b border-darkborder pb-4">
-                    <span class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 font-bold flex items-center justify-center font-serif-title text-lg border border-gold-500/30">05</span>
-                    <h3 class="font-bold text-lg text-white">Seducción Estratégica por WhatsApp</h3>
-                </div>
-                <ul class="text-sm text-gray-300 space-y-2.5">
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span><strong>La Regla de los 5 Días:</strong> Gestión de tiempos de respuesta e interés.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span>Uso inteligente de emojis y mensajes cortos de alto impacto.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span>Preguntas abiertas para dinamizar conversaciones frías.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-gold-500 mt-1"></i> <span>Saber cuándo cerrar la charla para dejar con ganas de más.</span></li>
-                </ul>
-            </div>
-
-            <!-- Módulo 6 -->
-            <div class="bg-darkcard border border-darkborder rounded-2xl p-6 hover:border-crimson-600/50 transition duration-300 space-y-4">
-                <div class="flex items-center gap-3 border-b border-darkborder pb-4">
-                    <span class="w-10 h-10 rounded-lg bg-crimson-600/10 text-crimson-500 font-bold flex items-center justify-center font-serif-title text-lg border border-crimson-600/30">06</span>
-                    <h3 class="font-bold text-lg text-white">Mentalidad Inquebrantable y Ego</h3>
-                </div>
-                <ul class="text-sm text-gray-300 space-y-2.5">
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span>Construir una mentalidad invulnerable ante el rechazo.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span>Lectura del parpadeo voluntario e indicadores de mentira.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span><strong>Amor Propio:</strong> Salir para siempre del rol de mendicidad o necesidad.</span></li>
-                    <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-crimson-500 mt-1"></i> <span>Fórmula para proyectar un estatus imponente en cualquier ambiente.</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Guarantee & Security Banner -->
-    <section class="py-12 bg-darkcard/50 border-y border-darkborder px-4">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-            <div class="w-20 h-20 rounded-full bg-gold-500/10 border-2 border-gold-500/40 flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-shield-halved text-3xl text-gold-400"></i>
-            </div>
-            <div class="space-y-2">
-                <h3 class="text-xl font-bold text-white font-serif-title">Acceso Garantizado y Seguro por Hotmart</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Tu pago procesado de forma encriptada a través de la plataforma Hotmart. Tan pronto como realices el pedido, recibirás las credenciales de acceso directamente en tu correo electrónico.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section with Direct Link Button -->
+    <!-- Call to Action Section -->
     <section id="comprar" class="py-20 px-4 text-center relative">
-        <div class="max-w-3xl mx-auto bg-gradient-to-b from-darkcard via-black to-darkcard border-2 border-gold-500/50 rounded-3xl p-8 sm:p-12 shadow-2xl space-y-8 gold-border-glow">
+        <div class="max-w-3xl mx-auto bg-darkcard border-2 border-gold-500/50 rounded-3xl p-8 sm:p-12 shadow-2xl space-y-8">
             
             <div class="space-y-4">
-                <span class="bg-crimson-600/20 text-crimson-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase border border-crimson-600/30 tracking-wider">
+                <span class="bg-red-900/40 text-red-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase border border-red-600/50 tracking-wider">
                     🔥 Descarga Inmediata en PDF
                 </span>
                 <h2 class="text-3xl sm:text-5xl font-black font-serif-title gold-gradient-text">
@@ -383,7 +213,7 @@
             </div>
 
             <!-- Price Card -->
-            <div class="bg-darkbg/90 p-6 rounded-2xl border border-darkborder max-w-sm mx-auto space-y-3">
+            <div class="bg-darkbg p-6 rounded-2xl border border-darkborder max-w-sm mx-auto space-y-3">
                 <p class="text-xs text-gray-400 uppercase tracking-widest">Precio Especial de Lanzamiento</p>
                 <div class="flex items-center justify-center gap-3">
                     <span class="text-gray-500 line-through text-lg font-bold">49.99 USD</span>
@@ -392,10 +222,10 @@
                 <p class="text-xs text-green-400 font-medium"><i class="fa-solid fa-check-circle"></i> Acceso de por vida al material</p>
             </div>
 
-            <!-- Direct Purchase Button -->
+            <!-- Botón 3: Checkout Final -->
             <div class="space-y-4">
-                <a href="https://pay.hotmart.com/U108058057U" target="_blank" rel="noopener noreferrer" class="w-full red-button-gradient text-white font-extrabold text-lg sm:text-xl px-8 py-5 rounded-xl shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-3 red-glow">
-                    <i class="fa-solid fa-cart-shopping text-yellow-300"></i>
+                <a href="https://pay.hotmart.com/U108058057U" target="_blank" rel="noopener noreferrer" class="btn-comprar w-full text-lg sm:text-xl px-8 py-5 rounded-xl">
+                    <i class="fa-solid fa-cart-shopping text-yellow-300 mr-3"></i>
                     <span>¡COMPRAR AHORA!</span>
                 </a>
             </div>
@@ -408,50 +238,10 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-12 px-4 max-w-3xl mx-auto space-y-8">
-        <div class="text-center space-y-2">
-            <h3 class="text-2xl font-bold font-serif-title text-white">Preguntas Frecuentes</h3>
-            <p class="text-xs text-gray-400">Todo lo que necesitas saber antes de comprar</p>
-        </div>
-        
-        <div class="space-y-4 text-sm">
-            <div class="bg-darkcard p-5 rounded-xl border border-darkborder space-y-2">
-                <p class="font-bold text-gold-400 flex items-center gap-2">
-                    <i class="fa-solid fa-circle-question"></i> ¿Por qué comprar desde este botón?
-                </p>
-                <p class="text-gray-300 leading-relaxed pl-6">
-                    El botón abre directamente la página oficial de Hotmart (`pay.hotmart.com`), lo que garantiza que la pasarela funcione de forma instantánea sin bloqueos de navegador ni errores de ventana emergente.
-                </p>
-            </div>
-
-            <div class="bg-darkcard p-5 rounded-xl border border-darkborder space-y-2">
-                <p class="font-bold text-gold-400 flex items-center gap-2">
-                    <i class="fa-solid fa-circle-question"></i> ¿En qué formato recibiré el libro?
-                </p>
-                <p class="text-gray-300 leading-relaxed pl-6">
-                    Recibirás un libro digital en formato **PDF**, el cual podrás descargar e instalar en cualquier dispositivo (Teléfono celular, Tablet, Computadora o Lectores de Ebook).
-                </p>
-            </div>
-
-            <div class="bg-darkcard p-5 rounded-xl border border-darkborder space-y-2">
-                <p class="font-bold text-gold-400 flex items-center gap-2">
-                    <i class="fa-solid fa-circle-question"></i> ¿Cuánto tarda en llegar el acceso?
-                </p>
-                <p class="text-gray-300 leading-relaxed pl-6">
-                    El envío es automático. Inmediatamente después de confirmar tu pago en la plataforma de Hotmart, recibirás un e-mail con tu enlace de descarga personal.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="border-t border-darkborder py-8 text-center text-xs text-gray-500 bg-black">
         <div class="max-w-5xl mx-auto px-4 space-y-3">
             <p>© 2026 Máster de la Seducción. Todos los derechos reservados.</p>
-            <p class="text-[10px] text-gray-600 max-w-2xl mx-auto">
-                Descargo de responsabilidad: Los resultados pueden variar según el compromiso, contexto y práctica individual. Este producto se vende a través de Hotmart.
-            </p>
         </div>
     </footer>
 
